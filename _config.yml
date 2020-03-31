@@ -6,3 +6,12 @@ theme: jekyll-theme-leap-day
 
 gems:
   - jekyll-mentions
+
+collections:
+  posts:
+    permalink: "/blog/:year/:month/:day/:title/"
+    output: true
+defaults:
+- scope:
+    path: _posts
+    type: posts
