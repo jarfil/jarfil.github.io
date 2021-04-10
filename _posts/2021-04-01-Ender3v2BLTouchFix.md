@@ -71,11 +71,11 @@ You should expect a repeatability error of:
 
 Desired error level for a 0.20 mm nozzle:
 
-* <0.01 mm - perfect
+* &lt;0.01 mm - perfect
 * 0.01~0.05 mm - good enough
 * 0.05~0.10 mm - some adhesion errors
-* >0.10 mm - bad
-* >0.50 mm - worse than no correction at all
+* &gt;0.10 mm - bad
+* &gt;0.50 mm - worse than no correction at all
 
 ### Examples of Z axis creep
 
@@ -87,6 +87,7 @@ Desired error level for a 0.20 mm nozzle:
 After homing Z, probing started at the lower left corner, then kept going up and in diagonals to the lower right. Maximum height measured at top right corner.
 
 <figure class="image">
+
 ![G29 P1 bed leveling](/assets/202104/bed-20210316a-graph.png)
 <figcaption>G29 P1 bed leveling</figcaption>
 </figure>
