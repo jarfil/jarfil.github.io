@@ -2,6 +2,9 @@
 layout: default
 title: Blog
 ---
+
+Kind of forgotten, kind of revived, Jarfil's Blog.
+
 <h1>Latest Posts</h1>
 
 <ul>
