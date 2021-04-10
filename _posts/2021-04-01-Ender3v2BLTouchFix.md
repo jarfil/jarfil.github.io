@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Ender 3v2 BLTouch leveling fix
 permalink: new-page.html
 description: 
