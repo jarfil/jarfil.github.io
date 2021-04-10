@@ -1,7 +1,7 @@
 ---
 title: Ender 3v2 BLTouch leveling fix
 permalink: new-page.html
-description:
+description: 
 date: 2021-04-10 22:23:27 +02:00
 tags: "3dprinter ender3v2 bltouch 3dtouch"
 ---
@@ -48,7 +48,7 @@ Not that the measure doesn't matter if it's reproducible, your bed and sensor ca
 ## Check for Z axis creep
 
 The simplest check is:
-
+    
     home Z
     for 1 to 100
      probe point
@@ -64,7 +64,7 @@ In Marling GCODE, that would be:
     G29 P1 C ; probe invalidated point
     ; end for
     G29 T ; output topology
-
+    
 You should expect a repeatability error of:
 
 * BLTouch: 0.005~0.015 mm
@@ -77,8 +77,9 @@ Anything above 0.010 mm will cause some trouble, but an error of 0.500 mm is eve
 
 ### Examples of Z axis creep measures
 
-![Automatic bed leveling through LCD](/assets/bed-20210316-error.png)
+![Automatic bed leveling through LCD](/assets/202104/bed-20210316-error.png)
 
-![G29 P1 bed leveling](/assets/bed-20210316a-graph.png)
+![G29 P1 bed leveling](/assets/202104/bed-20210316a-graph.png)
 
-![Maximum error per point after leveling 4 times in a row](/assets/bed-20210317-max_error.png)
+![Maximum error per point after leveling 4 times in a row](/assets/202104/bed-20210317-max_error.png)
+
