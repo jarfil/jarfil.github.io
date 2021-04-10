@@ -79,18 +79,13 @@ Desired error level for a 0.20 mm nozzle:
 
 ### Examples of Z axis creep
 
-<figure class="image">
 ![Automatic bed leveling through LCD](/assets/202104/bed-20210316-error.png)
-<figcaption>Automatic bed leveling through LCD</figcaption>
-</figure>
+Automatic bed leveling through LCD
 
 After homing Z, probing started at the lower left corner, then kept going up and in diagonals to the lower right. Maximum height measured at top right corner.
 
-<figure class="image">
-
 ![G29 P1 bed leveling](/assets/202104/bed-20210316a-graph.png)
-<figcaption>G29 P1 bed leveling</figcaption>
-</figure>
+G29 P1 bed leveling
 
 After homing Z in the middle of the bed, probing started in kind of a spiral. Maximum height at the outside of the bed.
 
@@ -102,10 +97,8 @@ Custom "right to left" probe in an S pattern: [probe 10x10 right to left](/asset
 
 ## Averaging it out
 
-<figure class="image">
 ![Maximum error per point after leveling 4 times in a row](/assets/202104/bed-20210317-max_error.png)
-<figcaption>Maximum error at each point after leveling 4 times</figcaption>
-</figure>
+Maximum error at each point after leveling 4 times
 
 After repeating the same "center to outside" measurement 4 times in a row, calculated an average, then extracted maximum distance from average for every point.
 
