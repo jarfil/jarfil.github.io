@@ -78,6 +78,9 @@ Anything above 0.010 mm will cause some trouble, but an error of 0.500 mm is eve
 
 ### Examples of Z axis creep measures
 
-![Automatic bed leveling through firmware](../assets/bed 20210316 error.png)
+![Automatic bed leveling through LCD](/assets/bed-20210316-error.png)
 
+![G29 P1 bed leveling](/assets/bed-20210316a-graph.png)
+
+![Maximum error per point after leveling 4 times in a row](/assets/bed-20210317-max_error.png)
 
