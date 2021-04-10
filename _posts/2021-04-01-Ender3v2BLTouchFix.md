@@ -1,9 +1,8 @@
 ---
 title: Ender 3v2 BLTouch leveling fix
-permalink: new-page.html
-description: 
 date: 2021-04-10 22:23:27 +02:00
 tags: "3dprinter ender3v2 bltouch 3dtouch"
+author: jarfil
 ---
 
 # BLTouch doesn't fix it all
@@ -160,8 +159,9 @@ By default, the firmware's `G29 P1` doesn't probe the outermost points. These ca
 
 Some alternative strategies would be:
 
-* Leave it the unpopulated areas at 0. Kind of dangerous, since the head can slam into the bed, but good enough if the bed is concave with the center being 
-* Fill with "highest neighbor" values. 
+* Leave the unpopulated points at 0. Kind of dangerous, since the head can slam into the bed, but good enough if the bed is concave with the center being the lowest point.
+* Fill with "highest neighbor" values. Safe bet, but will have bad bed adhesion at the borders (particularly relevant for the initial purge line).
+* Fill with "lowest neighbor" values. Good enough for a rubber based magnetic bed.
 
 # ToDo
 
