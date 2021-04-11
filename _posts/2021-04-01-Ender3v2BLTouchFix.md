@@ -97,10 +97,12 @@ After homing Z in the middle of the bed, probing started in kind of a spiral. Ma
 
 ![Left-to-Right probing](/assets/202104/bed-20210319-ltr.png)
 (Left-to-Right probing)
+
 Custom "left to right" probe in an S pattern: [probe 10x10 left to right](/assets/202104/probe-10x10-LTR.gcode).
 
 ![Right-to-Left probing](/assets/202104/bed-20210319-rtl.png)
 (Right-to-Left probing)
+
 Custom "right to left" probe in an S pattern: [probe 10x10 right to left](/assets/202104/probe-10x10-RTL.gcode).
 
 
