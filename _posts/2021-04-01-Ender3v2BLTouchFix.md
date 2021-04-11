@@ -36,6 +36,12 @@ Optional:
 * [Marlin GCODE](https://marlinfw.org/meta/gcode/)
     * [G29 UBL](https://marlinfw.org/docs/gcode/G029-ubl.html)
 
+Also used:
+
+* Extra thermal insulation
+* PC+fiberglass bed
+* Magnetic rubber bed
+
 ## Repeatability
 
 The key to a good bed leveling, is repeatability, or how to get the same measurement for the same thing every time, over and over, hundreds of times, thousands of times. Every time the probe touches the bed in the same spot, the firmware needs to think it's at the same Z height, and it needs to match the same nozzle Z position. Otherwise, you're getting Z axis creep.
@@ -80,25 +86,28 @@ Desired error level for a 0.20 mm nozzle:
 ### Examples of Z axis creep
 
 ![Automatic bed leveling through LCD](/assets/202104/bed-20210316-error.png)
-Automatic bed leveling through LCD
+(Automatic bed leveling through LCD)
 
 After homing Z, probing started at the lower left corner, then kept going up and in diagonals to the lower right. Maximum height measured at top right corner.
 
 ![G29 P1 bed leveling](/assets/202104/bed-20210316a-graph.png)
-G29 P1 bed leveling
+(G29 P1 bed leveling)
 
 After homing Z in the middle of the bed, probing started in kind of a spiral. Maximum height at the outside of the bed.
 
-
+![Left-to-Right probing](/assets/202104/bed-20210319-ltr.png)
+(Left-to-Right probing)
 Custom "left to right" probe in an S pattern: [probe 10x10 left to right](/assets/202104/probe-10x10-LTR.gcode).
 
+![Right-to-Left probing](/assets/202104/bed-20210319-rtl.png)
+(Right-to-Left probing)
 Custom "right to left" probe in an S pattern: [probe 10x10 right to left](/assets/202104/probe-10x10-RTL.gcode).
 
 
 ## Averaging it out
 
 ![Maximum error per point after leveling 4 times in a row](/assets/202104/bed-20210317-max_error.png)
-Maximum error at each point after leveling 4 times
+(Maximum error at each point after leveling 4 times)
 
 After repeating the same "center to outside" measurement 4 times in a row, calculated an average, then extracted maximum distance from average for every point.
 
@@ -130,7 +139,7 @@ In practice, there is just so far these can be taken without increasing costs an
 
 Since we can't fully trust the calibration, or the averaging of measurements, let's go back to the basics:
 
-* Bed levelling requires a hight measurement as precise as possible between "home Z" and "probe point", for every point of the correction mesh.
+* Bed leveling requires a height measurement as precise as possible between "home Z" and "probe point", for every point of the correction mesh.
 
 That can be done with:
 
