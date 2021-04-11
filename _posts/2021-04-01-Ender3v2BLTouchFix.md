@@ -191,6 +191,10 @@ Some alternative strategies would be:
 * Fill with "highest neighbor" values. Safe bet, but will have bad bed adhesion at the borders (particularly relevant for the initial purge line).
 * Fill with "lowest neighbor" values. Good enough for a rubber based magnetic bed.
 
+## Verifying the mesh
+
+(TO BE CONTINUED)
+
 # ToDo
 
 ...so this turned out to be a somewhat longer write-up, and it's still missing several things, but I'm tired now.
