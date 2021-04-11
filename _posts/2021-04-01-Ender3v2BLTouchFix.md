@@ -115,6 +115,20 @@ After repeating the same "center to outside" measurement 4 times in a row, calcu
 
 Points probed last, show the largest variability. Which means that averaging the measurements won't be enough.
 
+## Why it happens
+
+Every point probe actually consists of several moves:
+
+* Move XY to probe position
+* Move Z down until probe touches
+* Move Z up
+* Move Z down again, this time slower
+* Move Z up
+
+That is 4 times that any inaccuracy in the Z axis can introduce an error. For 8x8 = 64 points, that's 256 moves, which even with 0.001 mm Z axis creep per point, means a 0.256 mm error for the last point, which skews all the measurements.
+
+Effectively, you need less than 0.0001 mm average error per Z move to achieve 0.025 mm precision over 256 moves.
+
 ## Fixing it
 
 In an ideal world, every time the firmware requests a Z height of 0, the print head should go to the same place.
@@ -156,7 +170,16 @@ That can be done with:
      try to fix some of the hardware
      repeat from the beginning
 
-Custom "center to center" probe, pattern irrelevant: [probe 10x10 center to center](/assets/202104/probe-10x10-C2C.gcode).
+Custom "center to center" probe, pattern irrelevant:
+
+* [probe 10x10 center to center](/assets/202104/probe-10x10-C2C.gcode)
+
+This takes a while, but each point is probed relative to whatever `G28 Z` thinks zero means. Since it does the Z homing at the same spot (center of the bed), the error effectively gets reset for every point, so the average ends up being under 0.02 mm.
+
+![Final correction mesh](/assets/202104/bed-20210321-c2c_min_closest.png)
+(Final correction mesh)
+
+The final mesh looks much more realistic for a rubber magnetic bed that's moved slightly off-center.
 
 ## Fixing the borders
 
