@@ -7,9 +7,11 @@ author: jarfil
 
 # BLTouch doesn't fix it all
 
+![G29 P1 bed leveling](/assets/202104/bed-20210316a-graph.png)
+
 So you got a BLTouch or some 3DTouch working, and you're wondering why things aren't printing like they should. It was supposed to automatically compensate any bed irregularities, wasn't it?
 
-Chances are you did nothing wrong, but your printer it. Don't worry, you can fix it, or just work around it.
+Chances are you did nothing wrong, but your printer is. Don't worry, you can fix it, or just work around it.
 
 ## How BLTouch works
 
